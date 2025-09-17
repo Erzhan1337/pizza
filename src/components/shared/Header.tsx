@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/shared/Container";
-import { Search, ShoppingCart, UserRound } from "lucide-react";
+import { ArrowRight, Search, ShoppingCart, UserRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Header() {
@@ -32,14 +32,23 @@ function Header() {
             Войти
           </Button>
 
-          <div className="bg-primary flex items-center h-[48px] px-5 py-2 text-white rounded-xl">
+          <Link
+            href="/cart"
+            className="group bg-primary flex items-center h-[48px] px-5 py-2 text-white rounded-xl"
+          >
             <span>2000 ₸</span>
             <div className="w-[0.5px] h-full bg-white mx-3" />
-            <div className="flex items-center gap-1">
-              <ShoppingCart size={18}/>
-              <span>0</span>
+            <div className="relative">
+              <div className="flex items-center gap-1 group-hover:opacity-0 transition-all duration-300 ease-linear">
+                <ShoppingCart size={18} />
+                <span>0</span>
+              </div>
+              <ArrowRight
+                size={22}
+                className="absolute opacity-0 top-0 -translate-x-2 group-hover:translate-x-3 group-hover:opacity-100 transition-all duration-300 ease-linear"
+              />
             </div>
-          </div>
+          </Link>
         </div>
       </Container>
     </header>
