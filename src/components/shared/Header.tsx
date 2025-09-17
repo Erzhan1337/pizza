@@ -11,13 +11,13 @@ function Header() {
         {/*Logo*/}
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.png" alt="logo" width={35} height={35} />
-          <div>
-            <h1 className="uppercase text-2xl font-black">Dodo Пицца</h1>
+          <div className="hidden xl:block">
+            <h1 className="text-2xl uppercase font-black">Dodo Пицца</h1>
             <p className="text-sm font-bold">Сеть №1 в Казахстане</p>
           </div>
         </Link>
         {/*Search Bar*/}
-        <div className="w-[45vw] flex items-center gap-3 bg-gray-100 px-3 rounded-xl py-3">
+        <div className="hidden w-[50%] md:flex items-center gap-3 bg-gray-100 px-3 rounded-xl py-3">
           <Search size={16} />
           <input
             type="text"
