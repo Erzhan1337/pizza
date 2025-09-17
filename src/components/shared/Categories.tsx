@@ -76,9 +76,7 @@ function Categories() {
           onClick={() => setActiveCategory(category.id)}
           key={category.id}
           className={`cursor-pointer px-3 py-2 rounded-2xl transition-colors duration-300 relative z-10 whitespace-nowrap ${
-            activeCategory === category.id
-              ? "text-primary font-medium"
-              : "text-gray-600 hover:text-gray-800"
+            activeCategory === category.id && "text-primary font-medium"
           }`}
           role="tab"
           aria-selected={activeCategory === category.id}
