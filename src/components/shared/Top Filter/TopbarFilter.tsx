@@ -1,7 +1,7 @@
 "use client"
 import { Container } from "@/components/shared/Container";
-import Categories from "@/components/shared/Categories";
-import PopUp from "@/components/shared/PopUp";
+import Categories from "@/components/shared/Top Filter/Categories";
+import PopUp from "@/components/shared/Top Filter/PopUp";
 import { useState, useEffect } from "react";
 
 function TopbarFilter() {

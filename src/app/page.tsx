@@ -1,5 +1,6 @@
 import { Container } from "@/components/shared/Container";
-import TopbarFilter from "@/components/shared/TopbarFilter";
+import TopbarFilter from "@/components/shared/Top Filter/TopbarFilter";
+import Filter from "@/components/shared/Sidebar Filter/Filter";
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
         </h4>
       </Container>
       <TopbarFilter />
-      <div className="h-[2000px] bg-gray-300"></div>
+      <Container>
+        <Filter />
+      </Container>
     </main>
   );
 }
