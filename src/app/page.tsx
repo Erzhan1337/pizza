@@ -1,6 +1,7 @@
 import { Container } from "@/components/shared/Container";
 import TopbarFilter from "@/components/shared/Top Filter/TopbarFilter";
 import Filter from "@/components/shared/Sidebar Filter/Filter";
+import Products from "@/components/shared/Products/Products";
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
         </h4>
       </Container>
       <TopbarFilter />
-      <Container>
+      <Container className="flex gap-[80px]">
         <Filter />
+        <Products />
       </Container>
     </main>
   );

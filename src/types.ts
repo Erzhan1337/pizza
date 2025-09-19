@@ -45,3 +45,20 @@ export interface PizzaIngredient {
   price: number;
   image: string;
 }
+
+export interface PizzaSize {
+  size: number;
+  price: number;
+}
+
+export interface Pizza {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+  category: number;
+  rating: number;
+  ingredients: string[];
+  sizes: PizzaSize[];
+  canMake?: boolean;
+}
