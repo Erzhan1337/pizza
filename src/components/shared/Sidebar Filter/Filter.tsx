@@ -11,7 +11,7 @@ function Filter() {
   return (
     <div className="mt-5 w-[240px] h-[1500px]">
       <p className="text-[22px] font-bold">Фильтрация</p>
-      <CheckboxGroup options={checkboxOptions} className="my-7"/>
+      <CheckboxGroup options={checkboxOptions} className="my-7" />
       <FilteringByPrice />
       <Ingredients />
     </div>

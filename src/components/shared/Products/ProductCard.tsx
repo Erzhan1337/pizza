@@ -2,14 +2,13 @@ import Image from "next/image";
 import { Pizza } from "@/types";
 import Link from "next/link";
 import { Grid2x2Plus, Settings2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 function ProductCard({ pizza }: { pizza: Pizza }) {
   return (
-    <div className="w-[285px] mt-5">
+    <div className="mt-5">
       <Link
         href={`/pizza/${pizza.id}`}
-        className="relative w-[280px] h-[260px] bg-[#FFF7EE] flex items-center justify-center rounded-2xl"
+        className="relative w-full h-[260px] bg-[#FFF7EE] flex items-center justify-center rounded-2xl"
       >
         <button
           className={`absolute right-2 top-2 cursor-pointer p-3 ${pizza.canMake ? "inline-block" : "hidden"}`}
