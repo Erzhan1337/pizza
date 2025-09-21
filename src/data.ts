@@ -217,7 +217,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 1,
+    id: 15,
     name: "Маргарита",
     description: "Томатный соус, моцарелла, томаты, итальянские травы",
     image:
@@ -233,7 +233,7 @@ export const pizzas: Pizza[] = [
     canMake: true,
   },
   {
-    id: 2,
+    id: 16,
     name: "Пепперони",
     description: "Томатный соус, моцарелла, пепперони",
     image:
@@ -248,7 +248,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 3,
+    id: 17,
     name: "Четыре сыра",
     description: "Сливочный соус, моцарелла, пармезан, чеддер, дор-блю",
     image:
@@ -263,7 +263,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 4,
+    id: 18,
     name: "Гавайская",
     description: "Томатный соус, моцарелла, ветчина, ананас",
     image:
@@ -278,7 +278,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 5,
+    id: 19,
     name: "Мясная",
     description:
       "Томатный соус, моцарелла, ветчина, пепперони, бекон, говядина",
@@ -294,7 +294,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 6,
+    id: 20,
     name: "Барбекю",
     description: "Соус барбекю, моцарелла, курица, бекон, красный лук, томаты",
     image:
@@ -309,7 +309,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 7,
+    id: 21,
     name: "Овощная",
     description: "Томатный соус, моцарелла, томаты, перец, грибы, маслины, лук",
     image:
@@ -324,7 +324,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 8,
+    id: 22,
     name: "Морская",
     description: "Сливочный соус, моцарелла, креветки, кальмары, мидии, чеснок",
     image:
@@ -339,7 +339,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 9,
+    id: 23,
     name: "Цезарь",
     description:
       "Соус цезарь, моцарелла, курица, томаты черри, салат, пармезан",
@@ -355,7 +355,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 10,
+    id: 24,
     name: "Деревенская",
     description:
       "Томатный соус, моцарелла, картофель, лук, бекон, маринованные огурцы",
@@ -371,7 +371,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 11,
+    id: 25,
     name: "Диабло",
     description:
       "Острый томатный соус, моцарелла, пепперони, халапеньо, табаско",
@@ -387,7 +387,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 12,
+    id: 26,
     name: "Карбонара",
     description: "Сливочный соус, моцарелла, бекон, ветчина, пармезан, яйцо",
     image:
@@ -402,7 +402,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 13,
+    id: 27,
     name: "Пицца с курицей и грибами",
     description: "Сливочный соус, моцарелла, курица, шампиньоны, лук",
     image:
@@ -417,7 +417,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 14,
+    id: 28,
     name: "Острая с халапеньо",
     description: "Томатный соус, моцарелла, салями, халапеньо, перец чили",
     image:
@@ -432,7 +432,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 1,
+    id: 29,
     name: "Маргарита",
     description: "Томатный соус, моцарелла, томаты, итальянские травы",
     image:
@@ -448,7 +448,7 @@ export const pizzas: Pizza[] = [
     canMake: true,
   },
   {
-    id: 2,
+    id: 30,
     name: "Пепперони",
     description: "Томатный соус, моцарелла, пепперони",
     image:
@@ -463,7 +463,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 3,
+    id: 31,
     name: "Четыре сыра",
     description: "Сливочный соус, моцарелла, пармезан, чеддер, дор-блю",
     image:
@@ -478,7 +478,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 4,
+    id: 32,
     name: "Гавайская",
     description: "Томатный соус, моцарелла, ветчина, ананас",
     image:
@@ -493,7 +493,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 5,
+    id: 33,
     name: "Мясная",
     description:
       "Томатный соус, моцарелла, ветчина, пепперони, бекон, говядина",
@@ -509,7 +509,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 6,
+    id: 34,
     name: "Барбекю",
     description: "Соус барбекю, моцарелла, курица, бекон, красный лук, томаты",
     image:
@@ -524,7 +524,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 7,
+    id: 35,
     name: "Овощная",
     description: "Томатный соус, моцарелла, томаты, перец, грибы, маслины, лук",
     image:
@@ -539,7 +539,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 8,
+    id: 36,
     name: "Морская",
     description: "Сливочный соус, моцарелла, креветки, кальмары, мидии, чеснок",
     image:
@@ -554,7 +554,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 9,
+    id: 37,
     name: "Цезарь",
     description:
       "Соус цезарь, моцарелла, курица, томаты черри, салат, пармезан",
@@ -570,7 +570,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 10,
+    id: 38,
     name: "Деревенская",
     description:
       "Томатный соус, моцарелла, картофель, лук, бекон, маринованные огурцы",
@@ -586,7 +586,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 11,
+    id: 39,
     name: "Диабло",
     description:
       "Острый томатный соус, моцарелла, пепперони, халапеньо, табаско",
@@ -602,7 +602,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 12,
+    id: 40,
     name: "Карбонара",
     description: "Сливочный соус, моцарелла, бекон, ветчина, пармезан, яйцо",
     image:
@@ -617,7 +617,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 13,
+    id: 41,
     name: "Пицца с курицей и грибами",
     description: "Сливочный соус, моцарелла, курица, шампиньоны, лук",
     image:
@@ -632,7 +632,7 @@ export const pizzas: Pizza[] = [
     ],
   },
   {
-    id: 14,
+    id: 42,
     name: "Острая с халапеньо",
     description: "Томатный соус, моцарелла, салями, халапеньо, перец чили",
     image:

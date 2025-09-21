@@ -9,7 +9,7 @@ const checkboxOptions = [
 
 function Filter() {
   return (
-    <div className="mt-5 w-[240px] h-[1500px]">
+    <div className="hidden xl:block mt-5 w-[240px] h-[1500px]">
       <p className="text-[22px] font-bold">Фильтрация</p>
       <CheckboxGroup options={checkboxOptions} className="my-7" />
       <FilteringByPrice />

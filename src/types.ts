@@ -62,3 +62,10 @@ export interface Pizza {
   sizes: PizzaSize[];
   canMake?: boolean;
 }
+
+export interface CategoriesState {
+  sort:string,
+  setSort: (s: string) => void,
+  category:number,
+  setCategory: (c: number) => void
+}

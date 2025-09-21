@@ -41,7 +41,7 @@ const SortDropdown: React.FC<SortDropdownProps> = ({
   };
 
   return (
-    <div className={`hidden relative md:inline-block ${className}`} ref={dropdownRef}>
+    <div className={`hidden relative lg:inline-block ${className}`} ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-4 py-3 bg-gray-50 rounded-2xl hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500"

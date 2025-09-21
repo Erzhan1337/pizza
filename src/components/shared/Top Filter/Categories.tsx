@@ -8,6 +8,7 @@ import {
   CSSProperties,
 } from "react";
 import { Category, IndicatorStyle } from "@/types";
+import { useCategories } from "@/store/useCategories";
 
 const CATEGORIES: Category[] = [
   { id: 1, name: "Все" },
@@ -21,6 +22,7 @@ const CATEGORIES: Category[] = [
 function Categories() {
   const [activeCategory, setActiveCategory] = useState<number>(1);
   const [indicatorStyle, setIndicatorStyle] = useState<IndicatorStyle>({});
+  const category = useCategories(state => state.setCategory);
 
   const containerRef = useRef<HTMLDivElement>(null);
   const buttonRefs = useRef<Map<number, HTMLButtonElement>>(new Map());
@@ -50,6 +52,10 @@ function Categories() {
       });
     }
   }, [activeCategory]);
+
+  useEffect(() => {
+    category(activeCategory);
+  }, [activeCategory, category]);
 
   useEffect(() => {
     updateIndicatorPosition();
@@ -92,7 +98,7 @@ function Categories() {
   return (
     <div
       ref={containerRef}
-      className="bg-gray-50 rounded-2xl p-1 flex items-center gap-2 relative overflow-x-auto"
+      className="bg-gray-50 rounded-2xl p-1 flex items-center relative overflow-x-auto w-full justify-between lg:w-[700px]"
       role="tablist"
     >
       <div
