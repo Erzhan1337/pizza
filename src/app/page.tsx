@@ -12,7 +12,7 @@ export default function Home() {
         </h4>
       </Container>
       <TopbarFilter />
-      <Container className="flex gap-[80px]">
+      <Container className="flex gap-[80px] pb-10">
         <Filter />
         <Products />
       </Container>

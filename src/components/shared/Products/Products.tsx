@@ -141,7 +141,6 @@ function Products() {
           </button>
         </div>
       )}
-      <div className="h-[1500px]"></div>
     </div>
   );
 }
