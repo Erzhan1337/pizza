@@ -1,160 +1,29 @@
 "use client";
-import { PizzaIngredient } from "@/types";
 import { CheckboxGroup } from "@/components/shared/Sidebar Filter/Checkbox";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-
-const pizzaIngredients: PizzaIngredient[] = [
-  {
-    id: "1",
-    name: "Моцарелла",
-    category: "cheese",
-    price: 395,
-    image: "",
-  },
-  {
-    id: "2",
-    name: "Чеддер",
-    category: "cheese",
-    price: 395,
-    image: "",
-  },
-  {
-    id: "3",
-    name: "Пармезан",
-    category: "cheese",
-    price: 395,
-    image: "",
-  },
-  {
-    id: "4",
-    name: "Пепперони",
-    category: "meat",
-    price: 495,
-    image: "",
-  },
-  {
-    id: "5",
-    name: "Ветчина",
-    category: "meat",
-    price: 445,
-    image: "",
-  },
-  {
-    id: "6",
-    name: "Бекон",
-    category: "meat",
-    price: 495,
-    image: "",
-  },
-  {
-    id: "7",
-    name: "Курица",
-    category: "meat",
-    price: 445,
-    image: "",
-  },
-  {
-    id: "8",
-    name: "Салями",
-    category: "meat",
-    price: 495,
-    image: "",
-  },
-  {
-    id: "9",
-    name: "Шампиньоны",
-    category: "vegetables",
-    price: 295,
-    image: "",
-  },
-  {
-    id: "10",
-    name: "Помидоры",
-    category: "vegetables",
-    price: 245,
-    image: "",
-  },
-  {
-    id: "11",
-    name: "Сладкий перец",
-    category: "vegetables",
-    price: 245,
-    image: "",
-  },
-  {
-    id: "12",
-    name: "Красный лук",
-    category: "vegetables",
-    price: 195,
-    image: "",
-  },
-  {
-    id: "13",
-    name: "Маслины",
-    category: "vegetables",
-    price: 295,
-    image: "",
-  },
-  {
-    id: "14",
-    name: "Халапеньо",
-    category: "vegetables",
-    price: 295,
-    image: "",
-  },
-  {
-    id: "15",
-    name: "Ананас",
-    category: "vegetables",
-    price: 345,
-    image: "",
-  },
-  {
-    id: "16",
-    name: "Кукуруза",
-    category: "vegetables",
-    price: 245,
-    image: "",
-  },
-  {
-    id: "17",
-    name: "Брокколи",
-    category: "vegetables",
-    price: 295,
-    image: "",
-  },
-  {
-    id: "18",
-    name: "Чеснок",
-    category: "vegetables",
-    price: 195,
-    image: "",
-  },
-  {
-    id: "19",
-    name: "Креветки",
-    category: "seafood",
-    price: 745,
-    image: "",
-  },
-  {
-    id: "20",
-    name: "Лосось",
-    category: "seafood",
-    price: 845,
-    image: "",
-  },
-];
+import { useCategories } from "@/store/useCategories";
+import { pizzaIngredients } from "@/data";
 
 function Ingredients() {
   const [searchTerm, setSearchTerm] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const setSubmitted = useCategories((state) => state.setSubmitted);
+  const setIngredients = useCategories((state) => state.setIngredients);
+  const selectedIngredients = useCategories((state) => state.ingredients);
   const filteredIngredients = !searchTerm
     ? pizzaIngredients
     : pizzaIngredients.filter((ing) =>
         ing.name.toLowerCase().includes(searchTerm.toLowerCase()),
       );
+
+  const sortedIngredients = [...filteredIngredients].sort((a, b) => {
+    const aSelected = selectedIngredients.includes(a.id);
+    const bSelected = selectedIngredients.includes(b.id);
+    if (aSelected && !bSelected) return -1;
+    if (!aSelected && bSelected) return 1;
+    return 0;
+  });
 
   const handleClick = () => {
     if (isOpen) setSearchTerm("");
@@ -172,11 +41,12 @@ function Ingredients() {
         />
         <div className="h-[210px] overflow-auto">
           <CheckboxGroup
-            options={filteredIngredients.map((ingredient) => ({
+            options={sortedIngredients.map((ingredient) => ({
               id: ingredient.id,
               label: ingredient.name,
             }))}
             limit={isOpen ? pizzaIngredients.length : 6}
+            onChange={(value) => setIngredients(value)}
           />
         </div>
         <button
@@ -186,7 +56,11 @@ function Ingredients() {
           {isOpen ? "- Скрыть" : "+ Показать все"}
         </button>
       </div>
-      <Button className="w-full rounded-xl mt-10 cursor-pointer" size="lg">
+      <Button
+        onClick={() => setSubmitted(true)}
+        className="w-full rounded-xl mt-10 cursor-pointer"
+        size="lg"
+      >
         Применить
       </Button>
     </div>

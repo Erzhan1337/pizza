@@ -9,11 +9,28 @@ function Products() {
   const [currentPage, setCurrentPage] = useState(0);
   const filterBySorting = useCategories((state) => state.sort);
   const filterByCategory = useCategories((state) => state.category);
+  const filteredByPriceRange = useCategories((state) => state.priceRange);
+  const filteredByIngredients = useCategories((state) => state.ingredients);
+  const submitted = useCategories((state) => state.submitted);
   const filteredAndSortedPizzas = useMemo(() => {
-    const filtered =
+    let filtered =
       filterByCategory === 1
         ? [...pizzas]
         : pizzas.filter((pizza) => pizza.category === filterByCategory);
+
+    if (submitted) {
+      filtered = filtered.filter((pizza) => {
+        const priceRangeMatch =
+          pizza.sizes[0].price >= filteredByPriceRange[0] &&
+          pizza.sizes[0].price <= filteredByPriceRange[1];
+
+        const ingredientsMatch = filteredByIngredients.every((ing) =>
+          pizza.ingredients.includes(ing),
+        );
+
+        return priceRangeMatch && ingredientsMatch;
+      });
+    }
 
     switch (filterBySorting) {
       case "price":
@@ -25,8 +42,15 @@ function Products() {
       default:
         break;
     }
+
     return filtered;
-  }, [filterByCategory, filterBySorting]);
+  }, [
+    filterByCategory,
+    filterBySorting,
+    filteredByPriceRange,
+    filteredByIngredients,
+    submitted,
+  ]);
   const itemsPerPage = 6;
   const pagesPerGroup = 5;
   const countOfPage = Math.ceil(filteredAndSortedPizzas.length / itemsPerPage);

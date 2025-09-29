@@ -64,8 +64,14 @@ export interface Pizza {
 }
 
 export interface CategoriesState {
-  sort:string,
-  setSort: (s: string) => void,
-  category:number,
-  setCategory: (c: number) => void
+  sort: string;
+  setSort: (s: string) => void;
+  category: number;
+  setCategory: (c: number) => void;
+  priceRange: number[];
+  setPriceRange: (range: number[]) => void;
+  ingredients: string[];
+  setIngredients: (ing: string[]) => void;
+  submitted: boolean;
+  setSubmitted: (s: boolean) => void;
 }

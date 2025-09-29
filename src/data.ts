@@ -1,4 +1,4 @@
-import { Pizza } from "@/types";
+import { Pizza, PizzaIngredient } from "@/types";
 
 export const pizzas: Pizza[] = [
   {
@@ -645,5 +645,149 @@ export const pizzas: Pizza[] = [
       { size: 30, price: 3395 },
       { size: 35, price: 4245 },
     ],
+  },
+];
+
+
+export const pizzaIngredients: PizzaIngredient[] = [
+  {
+    id: "1",
+    name: "Моцарелла",
+    category: "cheese",
+    price: 395,
+    image: "",
+  },
+  {
+    id: "2",
+    name: "Чеддер",
+    category: "cheese",
+    price: 395,
+    image: "",
+  },
+  {
+    id: "3",
+    name: "Пармезан",
+    category: "cheese",
+    price: 395,
+    image: "",
+  },
+  {
+    id: "4",
+    name: "Пепперони",
+    category: "meat",
+    price: 495,
+    image: "",
+  },
+  {
+    id: "5",
+    name: "Ветчина",
+    category: "meat",
+    price: 445,
+    image: "",
+  },
+  {
+    id: "6",
+    name: "Бекон",
+    category: "meat",
+    price: 495,
+    image: "",
+  },
+  {
+    id: "7",
+    name: "Курица",
+    category: "meat",
+    price: 445,
+    image: "",
+  },
+  {
+    id: "8",
+    name: "Салями",
+    category: "meat",
+    price: 495,
+    image: "",
+  },
+  {
+    id: "9",
+    name: "Шампиньоны",
+    category: "vegetables",
+    price: 295,
+    image: "",
+  },
+  {
+    id: "10",
+    name: "Помидоры",
+    category: "vegetables",
+    price: 245,
+    image: "",
+  },
+  {
+    id: "11",
+    name: "Сладкий перец",
+    category: "vegetables",
+    price: 245,
+    image: "",
+  },
+  {
+    id: "12",
+    name: "Красный лук",
+    category: "vegetables",
+    price: 195,
+    image: "",
+  },
+  {
+    id: "13",
+    name: "Маслины",
+    category: "vegetables",
+    price: 295,
+    image: "",
+  },
+  {
+    id: "14",
+    name: "Халапеньо",
+    category: "vegetables",
+    price: 295,
+    image: "",
+  },
+  {
+    id: "15",
+    name: "Ананас",
+    category: "vegetables",
+    price: 345,
+    image: "",
+  },
+  {
+    id: "16",
+    name: "Кукуруза",
+    category: "vegetables",
+    price: 245,
+    image: "",
+  },
+  {
+    id: "17",
+    name: "Брокколи",
+    category: "vegetables",
+    price: 295,
+    image: "",
+  },
+  {
+    id: "18",
+    name: "Чеснок",
+    category: "vegetables",
+    price: 195,
+    image: "",
+  },
+  {
+    id: "19",
+    name: "Креветки",
+    category: "seafood",
+    price: 745,
+    image: "",
+  },
+  {
+    id: "20",
+    name: "Лосось",
+    category: "seafood",
+    price: 845,
+    image: "",
   },
 ];
