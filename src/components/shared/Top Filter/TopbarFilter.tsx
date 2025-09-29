@@ -21,7 +21,7 @@ function TopbarFilter() {
   return (
     <div
       className={`
-        w-full sticky top-0 z-50
+        w-full sticky top-0 z-10
         transition-all duration-300
         ${isSticky
         ? 'bg-white/50 backdrop-blur-lg shadow-md'
