@@ -75,3 +75,4 @@ export interface CategoriesState {
   submitted: boolean;
   setSubmitted: (s: boolean) => void;
 }
+

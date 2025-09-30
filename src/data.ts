@@ -77,6 +77,7 @@ export const pizzas: Pizza[] = [
       { size: 30, price: 3595 },
       { size: 35, price: 4495 },
     ],
+    canMake: true,
   },
   {
     id: 6,
@@ -648,146 +649,132 @@ export const pizzas: Pizza[] = [
   },
 ];
 
-
 export const pizzaIngredients: PizzaIngredient[] = [
   {
     id: "1",
     name: "Моцарелла",
     category: "cheese",
     price: 395,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991534e2c1742483f4b861cd9c687b.png",
   },
   {
     id: "2",
     name: "Чеддер",
     category: "cheese",
     price: 395,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991534fc1175cc8fbceffda60604c6.png",
   },
   {
     id: "3",
     name: "Пармезан",
     category: "cheese",
     price: 395,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991534fc1175cc8fbceffda60604c6.png",
   },
   {
     id: "4",
     name: "Пепперони",
     category: "meat",
     price: 495,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991532094578d684f9a6554920377e.png",
   },
   {
     id: "5",
     name: "Ветчина",
     category: "meat",
     price: 445,
-    image: "",
+    image: "https://cdn.dodostatic.net/static/Img/Ingredients/01991533855772df87ba3c143e2c54e2.png",
   },
   {
     id: "6",
     name: "Бекон",
     category: "meat",
     price: 495,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991533855772df87ba3c143e2c54e2.png",
   },
   {
     id: "7",
     name: "Курица",
     category: "meat",
     price: 445,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/019915344152716bb2ea308e6e9f60d0.png",
   },
   {
     id: "8",
     name: "Салями",
     category: "meat",
     price: 495,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991534324373009719a948305f1326.png",
   },
   {
     id: "9",
     name: "Шампиньоны",
     category: "vegetables",
     price: 295,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991532a3247905a400876549e4e701.png",
   },
   {
     id: "10",
     name: "Помидоры",
     category: "vegetables",
     price: 245,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/019915315c6170e6b2d6b89d908cff7e.png",
   },
   {
     id: "11",
     name: "Сладкий перец",
     category: "vegetables",
     price: 245,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/019915339505783291265a6222b52677.png",
   },
   {
     id: "12",
     name: "Красный лук",
     category: "vegetables",
     price: 195,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/0199153219327638b3c54e121f5cfe3d.png",
   },
   {
     id: "13",
-    name: "Маслины",
+    name: "Брынза",
     category: "vegetables",
     price: 295,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/019915314bfe791e8d140f5486950491.png",
   },
   {
     id: "14",
     name: "Халапеньо",
     category: "vegetables",
     price: 295,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991532c820763a8c4c825a5a40c227.png",
   },
   {
     id: "15",
     name: "Ананас",
     category: "vegetables",
     price: 345,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991531f6c87608ac218692c725d06d.png",
   },
   {
     id: "16",
-    name: "Кукуруза",
+    name: "Италянские травы",
     category: "vegetables",
     price: 245,
-    image: "",
-  },
-  {
-    id: "17",
-    name: "Брокколи",
-    category: "vegetables",
-    price: 295,
-    image: "",
-  },
-  {
-    id: "18",
-    name: "Чеснок",
-    category: "vegetables",
-    price: 195,
-    image: "",
-  },
-  {
-    id: "19",
-    name: "Креветки",
-    category: "seafood",
-    price: 745,
-    image: "",
-  },
-  {
-    id: "20",
-    name: "Лосось",
-    category: "seafood",
-    price: 845,
-    image: "",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991533754f799cbe7c4f89a02bbe56.png",
   },
 ];
