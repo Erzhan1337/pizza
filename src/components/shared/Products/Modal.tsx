@@ -38,19 +38,22 @@ function Modal({ pizza, onClose }: Props) {
       {/* Overlay */}
       <div className="fixed inset-0 bg-black/50 z-50" onClick={onClose} />
       {/*Modal*/}
-      <div className="fixed rounded-3xl flex z-60 w-[60%] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
+      <div className="fixed rounded-3xl flex z-60 w-[90%] lg:w-[75%] xl:w-[60%] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]">
         <div className="relative w-[50%] bg-white rounded-tl-3xl rounded-bl-3xl">
           <Image
             src={pizza.image}
             alt={pizza.name}
             fill
+            sizes="(max-width: 1280px) 100vw,(max-width:1024px) 50vw,33vw"
             className="object-contain"
           />
         </div>
 
-        <div className="w-[50%] bg-[#F4F1EE] h-full rounded-tr-3xl rounded-br-3xl py-7 px-10">
-          <h4 className="text-2xl font-bold mb-2">{pizza.name}</h4>
-          <p className="text-gray-400 mb-2">
+        <div className="w-[70%] lg:w-[50%] bg-[#F4F1EE] h-full rounded-tr-3xl rounded-br-3xl py-2 md:py-4 xl:py-7 px-4 md:px-6 lg:px-8 xl:px-10">
+          <h4 className="text-base lg:text-xl xl:text-2xl font-bold mb-1 md:md-2">
+            {pizza.name}
+          </h4>
+          <p className="text-xs md:text-sm xl:text-base text-gray-400 mb-2">
             25 см, традиционное тесто 25, 380 г
           </p>
           {/*Types*/}
@@ -80,7 +83,7 @@ function Modal({ pizza, onClose }: Props) {
               ))}
             </div>
           </div>
-          <button className="mt-5 rounded-xl py-3 w-full text-white bg-primary cursor-pointer">
+          <button className="text-xs md:text-base mt-2 md:mt-3 lg:mt-5 rounded-xl py-2 lg:py-3 w-full text-white bg-primary cursor-pointer">
             Добавить в корзину за {totalPrice} ₸
           </button>
         </div>
