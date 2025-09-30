@@ -21,7 +21,7 @@ function IngredientCard({
       onClick={handleAddIngredient}
     >
       {isSelected && (
-        <div className="p-1 border border-primary absolute rounded-full top-1 right-1 lg:top-3 lg:right-2">
+        <div className="p-1 border border-primary absolute rounded-full top-1 right-1 lg:top-2 lg:right-2">
           <Check size={10} className="text-primary" />
         </div>
       )}
@@ -36,7 +36,9 @@ function IngredientCard({
       <span className="font-thin text-[10px] md:text-sm line-clamp-2 h-[26px]">
         {ingredient.name}
       </span>
-      <span className="text-[10px] md:text-sm xl:text-base font-semibold">{ingredient.price} ₸</span>
+      <span className="text-[10px] md:text-sm xl:text-base font-semibold">
+        {ingredient.price} ₸
+      </span>
     </button>
   );
 }

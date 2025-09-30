@@ -4,7 +4,7 @@ function Toggle({
   onChange,
 }: {
   selected: number;
-  options: string[];
+  options: Array<{ name: string; size?: string }>;
   onChange: (selected: number) => void;
 }) {
   return (
@@ -22,7 +22,7 @@ function Toggle({
           key={index}
           onClick={() => onChange(index)}
         >
-          {option}
+          {option.name}
         </button>
       ))}
     </div>

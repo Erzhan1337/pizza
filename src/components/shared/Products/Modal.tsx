@@ -5,14 +5,31 @@ import { Pizza } from "@/types";
 import { useEffect, useState } from "react";
 import { pizzaIngredients } from "@/data";
 import IngredientCard from "@/components/shared/Products/IngredientCard";
+import { X } from "lucide-react";
 
 interface Props {
   pizza: Pizza;
   onClose: () => void;
 }
 
-const sizes = ["Маленькая", "Средняя", "Большая"];
-const doughTypes = ["Тонкое", "Традиционное"];
+const sizes = [
+  {
+    name: "Маленькая",
+    size: "25 см",
+    weight: "380 г",
+  },
+  {
+    name: "Средняя",
+    size: "30 см",
+    weight: "470 г",
+  },
+  {
+    name: "Большая",
+    size: "35 см",
+    weight: "550 г",
+  },
+];
+const doughTypes = [{ name: "Традиционное" }, { name: "Тонкое" }];
 
 function Modal({ pizza, onClose }: Props) {
   const [selectedSize, setSelectedSize] = useState(0);
@@ -49,12 +66,19 @@ function Modal({ pizza, onClose }: Props) {
           />
         </div>
 
-        <div className="w-[70%] lg:w-[50%] bg-[#F4F1EE] h-full rounded-tr-3xl rounded-br-3xl py-2 md:py-4 xl:py-7 px-4 md:px-6 lg:px-8 xl:px-10">
+        <div className="relative w-[70%] lg:w-[50%] bg-[#F4F1EE] h-full rounded-tr-3xl rounded-br-3xl py-2 md:py-4 xl:py-7 px-4 md:px-6 lg:px-8 xl:px-10">
+          <button
+            className="absolute right-3 top-3 cursor-pointer hover:scale-90 transition-all duration-300"
+            onClick={() => onClose()}
+          >
+            <X />
+          </button>
           <h4 className="text-base lg:text-xl xl:text-2xl font-bold mb-1 md:md-2">
             {pizza.name}
           </h4>
           <p className="text-xs md:text-sm xl:text-base text-gray-400 mb-2">
-            25 см, традиционное тесто 25, 380 г
+            {sizes[selectedSize].size}, {doughTypes[selectedDough].name} тесто,{" "}
+            {sizes[selectedSize].weight}
           </p>
           {/*Types*/}
           <div>
