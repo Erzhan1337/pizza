@@ -41,18 +41,22 @@ export interface CheckboxGroupProps {
 export interface PizzaIngredient {
   id: string;
   name: string;
-  category: string;
+  category?: string;
   price: number;
   image: string;
 }
 
 export interface PizzaSize {
-  size: number;
+  text:string;
+  image:string;
+  size: string;
+  dough:string;
   price: number;
+  weight: number;
 }
 
 export interface Pizza {
-  id: number;
+  id: string;
   name: string;
   description: string;
   image: string;
@@ -76,3 +80,24 @@ export interface CategoriesState {
   setSubmitted: (s: boolean) => void;
 }
 
+export interface Item {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+  size: string;
+  dough: string;
+  ingredients?: string[];
+  image: string;
+}
+
+export interface Cart {
+  items: Item[];
+  decreaseQuantity: (id: string) => void;
+  increaseQuantity: (id: string) => void;
+  addItem: (item: Item) => void;
+  removeItem: (id: string) => void;
+  clearCart: () => void;
+  getTotalPrice: () => number;
+  getTotalItems: () => number;
+}

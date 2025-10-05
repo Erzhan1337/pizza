@@ -3,7 +3,7 @@ import { Pizza } from "@/types";
 
 interface ProductListProps {
   pizzas: Pizza[];
-  onProductClick: (id: number) => void;
+  onProductClick: (id: string) => void;
   onModalOpen: (open: boolean) => void;
 }
 

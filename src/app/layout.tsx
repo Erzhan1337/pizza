@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
-import Header from "@/components/shared/Header";
 
 const nunito = Nunito({
   variable: "--font-nunito-sans",
@@ -22,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunito.className} antialiased`}>
-        <Header />
         {children}
       </body>
     </html>

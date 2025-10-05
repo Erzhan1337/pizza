@@ -2,649 +2,532 @@ import { Pizza, PizzaIngredient } from "@/types";
 
 export const pizzas: Pizza[] = [
   {
-    id: 1,
-    name: "Маргарита",
-    description: "Томатный соус, моцарелла, томаты, итальянские травы",
+    id: "1",
+    name: "Терияки",
     image:
-      "https://media.dodostatic.net/image/r:584x584/01995c54d41178da8539c768e3232d2b.avif",
-    category: 5, // Вегетарианские
-    rating: 4.5,
-    ingredients: ["1", "10"],
+      "https://media.dodostatic.net/image/r:584x584/019854dd4a2e75de88b7c96b59da9775.avif",
+    description:
+      "Нежный цыпленок, красный лук, зеленый перец, соус терияки, сыр моцарелла и фирменный соус альфредо",
+    category: 6, // С курицей
+    rating: 5,
+    ingredients: ["1", "4", "11", "12", "16"],
     sizes: [
-      { size: 25, price: 1995 },
-      { size: 30, price: 2745 },
-      { size: 35, price: 3495 },
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Традиционное",
+        image: "/ter_25_tra.png",
+        price: 2890,
+        weight: 380,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/ter_30_tra.png",
+        price: 3890,
+        weight: 450,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/ter_35_tra.png",
+        price: 4890,
+        weight: 600,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/ter_30_ton.png",
+        price: 3890,
+        weight: 420,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/ter_35_tonk.png",
+        price: 4890,
+        weight: 550,
+      },
     ],
-    canMake: true,
   },
   {
-    id: 2,
+    id: "2",
     name: "Пепперони",
-    description: "Томатный соус, моцарелла, пепперони",
     image:
       "https://media.dodostatic.net/image/r:584x584/01995c2bbccc719094cc6fd0ead33551.avif",
+    description:
+      "Пикантная пепперони, увеличенная порция моцареллы, томатный соус",
     category: 2, // Мясные
     rating: 4.8,
-    ingredients: ["1", "4"],
+    ingredients: ["2", "11"],
     sizes: [
-      { size: 25, price: 2295 },
-      { size: 30, price: 3145 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 3,
-    name: "Четыре сыра",
-    description: "Сливочный соус, моцарелла, пармезан, чеддер, дор-блю",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c479e6e7430b77b3b72a73d0416.avif",
-    category: 5, // Вегетарианские
-    rating: 4.7,
-    ingredients: ["1", "2", "3"],
-    sizes: [
-      { size: 25, price: 2445 },
-      { size: 30, price: 3345 },
-      { size: 35, price: 4245 },
-    ],
-  },
-  {
-    id: 4,
-    name: "Гавайская",
-    description: "Томатный соус, моцарелла, ветчина, ананас",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c5ac24e7838a952f194b30f76ff.avif",
-    category: 2, // Мясные
-    rating: 4.2,
-    ingredients: ["1", "5", "15"],
-    sizes: [
-      { size: 25, price: 2245 },
-      { size: 30, price: 2995 },
-      { size: 35, price: 3795 },
-    ],
-  },
-  {
-    id: 5,
-    name: "Мясная",
-    description:
-      "Томатный соус, моцарелла, ветчина, пепперони, бекон, говядина",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c6c934b756d9ffa69f3504fc150.avif",
-    category: 2, // Мясные
-    rating: 4.9,
-    ingredients: ["1", "4", "5", "6", "8"],
-    sizes: [
-      { size: 25, price: 2645 },
-      { size: 30, price: 3595 },
-      { size: 35, price: 4495 },
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Традиционное",
+        image: "/pep_25_tra.png",
+        price: 2590,
+        weight: 350,
+      },
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Тонкое",
+        image: "/pep_25_ton.png",
+        price: 2590,
+        weight: 320,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/pep_30_tra.png",
+        price: 3590,
+        weight: 480,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/pep_30_ton.png",
+        price: 3590,
+        weight: 450,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/pep_35_tra.png",
+        price: 4590,
+        weight: 620,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/pep_35_ton.png",
+        price: 4590,
+        weight: 580,
+      },
     ],
     canMake: true,
   },
   {
-    id: 6,
+    id: "3",
+    name: "Маргарита",
+    image:
+      "https://media.dodostatic.net/image/r:584x584/11EE7D610D2925109AB2E1C92CC5383C.avif",
+    description:
+      "Увеличенная порция моцареллы, томаты, итальянские травы, томатный соус",
+    category: 5, // Вегетарианские
+    rating: 4.6,
+    ingredients: ["11", "8", "15"],
+    sizes: [
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Традиционное",
+        image: "/mar_25_tra.png",
+        price: 2290,
+        weight: 340,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/mar_30_tra.png",
+        price: 3290,
+        weight: 460,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/mar_30_ton.png",
+        price: 3290,
+        weight: 430,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/mar_35_tra.png",
+        price: 4290,
+        weight: 590,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/mar_35_ton.png",
+        price: 4290,
+        weight: 550,
+      },
+    ],
+  },
+  {
+    id: "4",
+    name: "Четыре сыра",
+    image:
+      "https://media.dodostatic.net/image/r:584x584/11EE7D610E8BBB248F31270BE742B4BD.avif",
+    description:
+      "Моцарелла, сыры чеддер и пармезан, сырный соус, сливочный соус альфредо",
+    category: 5, // Вегетарианские
+    rating: 4.7,
+    ingredients: ["11", "13", "14", "16"],
+    sizes: [
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Традиционное",
+        image: "/cheese_25_tra.png",
+        price: 2990,
+        weight: 370,
+      },
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Тонкое",
+        image: "/cheese_25_ton.png",
+        price: 2990,
+        weight: 340,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/cheese_30_tra.png",
+        price: 3990,
+        weight: 500,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/cheese_30_ton.png",
+        price: 3990,
+        weight: 470,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/cheese_35_tra.png",
+        price: 4990,
+        weight: 640,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/cheese_35_ton.png",
+        price: 4990,
+        weight: 600,
+      },
+    ],
+  },
+  {
+    id: "5",
+    name: "Мексиканская",
+    image:
+      "https://media.dodostatic.net/image/r:584x584/01995c5ac24e7838a952f194b30f76ff.avif",
+    description:
+      "Острая чоризо, халапеньо, красный лук, томаты, моцарелла, соус сальса",
+    category: 3, // Острые
+    rating: 4.4,
+    ingredients: ["3", "5", "4", "8", "11"],
+    sizes: [
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/mex_30_tra.png",
+        price: 3790,
+        weight: 490,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/mex_30_ton.png",
+        price: 3790,
+        weight: 460,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/mex_35_tra.png",
+        price: 4790,
+        weight: 630,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/mex_35_ton.png",
+        price: 4790,
+        weight: 590,
+      },
+    ],
+  },
+  {
+    id: "6",
+    name: "Гавайская",
+    image:
+      "https://media.dodostatic.net/image/r:584x584/11EE7D610BBEB562BD4D48786AD87270.avif",
+    description: "Ветчина, ананасы, моцарелла, соус альфредо",
+    category: 4, // Сладкие
+    rating: 4.3,
+    ingredients: ["6", "9", "11", "16"],
+    sizes: [
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Традиционное",
+        image: "/haw_25_tra.png",
+        price: 2690,
+        weight: 360,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/haw_30_tra.png",
+        price: 3690,
+        weight: 490,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/haw_30_ton.png",
+        price: 3690,
+        weight: 460,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/haw_35_tra.png",
+        price: 4690,
+        weight: 620,
+      },
+    ],
+  },
+  {
+    id: "7",
+    name: "Карбонара",
+    image:
+      "https://media.dodostatic.net/image/r:584x584/01995c5bb469799693feb51b7efe218e.avif",
+    description:
+      "Бекон, сыры чеддер и пармезан, моцарелла, томаты, красный лук, соус альфредо",
+    category: 2, // Мясные
+    rating: 4.9,
+    ingredients: ["7", "13", "14", "11", "8", "4", "16"],
+    sizes: [
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Традиционное",
+        image: "/carb_25_tra.png",
+        price: 3090,
+        weight: 390,
+      },
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Тонкое",
+        image: "/carb_25_ton.png",
+        price: 3090,
+        weight: 360,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/carb_30_tra.png",
+        price: 4090,
+        weight: 520,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/carb_30_ton.png",
+        price: 4090,
+        weight: 490,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/carb_35_tra.png",
+        price: 5090,
+        weight: 670,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/carb_35_ton.png",
+        price: 5090,
+        weight: 630,
+      },
+    ],
+  },
+  {
+    id: "8",
     name: "Барбекю",
-    description: "Соус барбекю, моцарелла, курица, бекон, красный лук, томаты",
     image:
       "https://media.dodostatic.net/image/r:584x584/01995c314da277fd8acdfcf15e3c8298.avif",
-    category: 6, // С курицей
-    rating: 4.6,
-    ingredients: ["1", "6", "7", "10", "12"],
-    sizes: [
-      { size: 25, price: 2495 },
-      { size: 30, price: 3395 },
-      { size: 35, price: 4295 },
-    ],
-  },
-  {
-    id: 7,
-    name: "Овощная",
-    description: "Томатный соус, моцарелла, томаты, перец, грибы, маслины, лук",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c44a523772c9f60f7fe864fdccc.avif",
-    category: 5, // Вегетарианские
-    rating: 4.3,
-    ingredients: ["1", "9", "10", "11", "12", "13"],
-    sizes: [
-      { size: 25, price: 1995 },
-      { size: 30, price: 2695 },
-      { size: 35, price: 3395 },
-    ],
-  },
-  {
-    id: 8,
-    name: "Морская",
-    description: "Сливочный соус, моцарелла, креветки, кальмары, мидии, чеснок",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c3abfda7669b8fdf577f86b07a9.avif",
-    category: 2, // Мясные (морепродукты можно отнести к мясным)
-    rating: 4.7,
-    ingredients: ["1", "18", "19", "20"],
-    sizes: [
-      { size: 25, price: 3245 },
-      { size: 30, price: 4445 },
-      { size: 35, price: 5495 },
-    ],
-  },
-  {
-    id: 9,
-    name: "Цезарь",
-    description:
-      "Соус цезарь, моцарелла, курица, томаты черри, салат, пармезан",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c33ec9b7190911c2a7b133ee389.avif",
+    description: "Цыпленок, бекон, красный лук, моцарелла, соус барбекю",
     category: 6, // С курицей
     rating: 4.5,
-    ingredients: ["1", "3", "7", "10"],
+    ingredients: ["1", "7", "4", "11"],
     sizes: [
-      { size: 25, price: 2395 },
-      { size: 30, price: 3245 },
-      { size: 35, price: 4095 },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/bbq_30_tra.png",
+        price: 3890,
+        weight: 500,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/bbq_30_ton.png",
+        price: 3890,
+        weight: 470,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/bbq_35_tra.png",
+        price: 4890,
+        weight: 640,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/bbq_35_ton.png",
+        price: 4890,
+        weight: 600,
+      },
     ],
   },
   {
-    id: 10,
-    name: "Деревенская",
-    description:
-      "Томатный соус, моцарелла, картофель, лук, бекон, маринованные огурцы",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c42f704740cae3253e3af6994dc.avif",
-    category: 2, // Мясные
-    rating: 4.4,
-    ingredients: ["1", "6", "12"],
-    sizes: [
-      { size: 25, price: 2345 },
-      { size: 30, price: 3195 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 11,
-    name: "Диабло",
-    description:
-      "Острый томатный соус, моцарелла, пепперони, халапеньо, табаско",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c3e232d72f99537c7c7dc9cc78c.avif",
-    category: 3, // Острые
-    rating: 4.6,
-    ingredients: ["1", "4", "14"],
-    sizes: [
-      { size: 25, price: 2445 },
-      { size: 30, price: 3295 },
-      { size: 35, price: 4145 },
-    ],
-  },
-  {
-    id: 12,
-    name: "Карбонара",
-    description: "Сливочный соус, моцарелла, бекон, ветчина, пармезан, яйцо",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c487c4b757b90db16eaed736e8e.avif",
-    category: 2, // Мясные (изменил с "Сладкие", так как это мясная пицца)
-    rating: 4.8,
-    ingredients: ["1", "3", "5", "6"],
-    sizes: [
-      { size: 25, price: 2595 },
-      { size: 30, price: 3495 },
-      { size: 35, price: 4395 },
-    ],
-  },
-  {
-    id: 13,
-    name: "Пицца с курицей и грибами",
-    description: "Сливочный соус, моцарелла, курица, шампиньоны, лук",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c4a828c76c2bf34c92c03c0deac.avif",
-    category: 6, // С курицей
-    rating: 4.5,
-    ingredients: ["1", "7", "9", "12"],
-    sizes: [
-      { size: 25, price: 2345 },
-      { size: 30, price: 3195 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 14,
-    name: "Острая с халапеньо",
-    description: "Томатный соус, моцарелла, салями, халапеньо, перец чили",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c2dfc3f720dbc150e0210dbf02f.avif",
-    category: 3, // Острые
-    rating: 4.7,
-    ingredients: ["1", "8", "14"],
-    sizes: [
-      { size: 25, price: 2495 },
-      { size: 30, price: 3395 },
-      { size: 35, price: 4245 },
-    ],
-  },
-  {
-    id: 15,
-    name: "Маргарита",
-    description: "Томатный соус, моцарелла, томаты, итальянские травы",
+    id: "9",
+    name: "Вегетарианская",
     image:
       "https://media.dodostatic.net/image/r:584x584/01995c54d41178da8539c768e3232d2b.avif",
-    category: 5, // Вегетарианские
-    rating: 4.5,
-    ingredients: ["1", "10"],
-    sizes: [
-      { size: 25, price: 1995 },
-      { size: 30, price: 2745 },
-      { size: 35, price: 3495 },
-    ],
-    canMake: true,
-  },
-  {
-    id: 16,
-    name: "Пепперони",
-    description: "Томатный соус, моцарелла, пепперони",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c2bbccc719094cc6fd0ead33551.avif",
-    category: 2, // Мясные
-    rating: 4.8,
-    ingredients: ["1", "4"],
-    sizes: [
-      { size: 25, price: 2295 },
-      { size: 30, price: 3145 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 17,
-    name: "Четыре сыра",
-    description: "Сливочный соус, моцарелла, пармезан, чеддер, дор-блю",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c479e6e7430b77b3b72a73d0416.avif",
-    category: 5, // Вегетарианские
-    rating: 4.7,
-    ingredients: ["1", "2", "3"],
-    sizes: [
-      { size: 25, price: 2445 },
-      { size: 30, price: 3345 },
-      { size: 35, price: 4245 },
-    ],
-  },
-  {
-    id: 18,
-    name: "Гавайская",
-    description: "Томатный соус, моцарелла, ветчина, ананас",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c5ac24e7838a952f194b30f76ff.avif",
-    category: 2, // Мясные
-    rating: 4.2,
-    ingredients: ["1", "5", "15"],
-    sizes: [
-      { size: 25, price: 2245 },
-      { size: 30, price: 2995 },
-      { size: 35, price: 3795 },
-    ],
-  },
-  {
-    id: 19,
-    name: "Мясная",
     description:
-      "Томатный соус, моцарелла, ветчина, пепперони, бекон, говядина",
+      "Шампиньоны, томаты, сладкий перец, красный лук, маслины, моцарелла, итальянские травы",
+    category: 5, // Вегетарианские
+    rating: 4.2,
+    ingredients: ["10", "8", "12", "4", "11", "15"],
+    sizes: [
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Традиционное",
+        image: "/veg_25_tra.png",
+        price: 2490,
+        weight: 350,
+      },
+      {
+        text: "Маленькая",
+        size: "25",
+        dough: "Тонкое",
+        image: "/veg_25_ton.png",
+        price: 2490,
+        weight: 320,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/veg_30_tra.png",
+        price: 3490,
+        weight: 480,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/veg_30_ton.png",
+        price: 3490,
+        weight: 450,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/veg_35_tra.png",
+        price: 4490,
+        weight: 610,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/veg_35_ton.png",
+        price: 4490,
+        weight: 570,
+      },
+    ],
+  },
+  {
+    id: "10",
+    name: "Мясная",
     image:
       "https://media.dodostatic.net/image/r:584x584/01995c6c934b756d9ffa69f3504fc150.avif",
-    category: 2, // Мясные
-    rating: 4.9,
-    ingredients: ["1", "4", "5", "6", "8"],
-    sizes: [
-      { size: 25, price: 2645 },
-      { size: 30, price: 3595 },
-      { size: 35, price: 4495 },
-    ],
-  },
-  {
-    id: 20,
-    name: "Барбекю",
-    description: "Соус барбекю, моцарелла, курица, бекон, красный лук, томаты",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c314da277fd8acdfcf15e3c8298.avif",
-    category: 6, // С курицей
-    rating: 4.6,
-    ingredients: ["1", "6", "7", "10", "12"],
-    sizes: [
-      { size: 25, price: 2495 },
-      { size: 30, price: 3395 },
-      { size: 35, price: 4295 },
-    ],
-  },
-  {
-    id: 21,
-    name: "Овощная",
-    description: "Томатный соус, моцарелла, томаты, перец, грибы, маслины, лук",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c44a523772c9f60f7fe864fdccc.avif",
-    category: 5, // Вегетарианские
-    rating: 4.3,
-    ingredients: ["1", "9", "10", "11", "12", "13"],
-    sizes: [
-      { size: 25, price: 1995 },
-      { size: 30, price: 2695 },
-      { size: 35, price: 3395 },
-    ],
-  },
-  {
-    id: 22,
-    name: "Морская",
-    description: "Сливочный соус, моцарелла, креветки, кальмары, мидии, чеснок",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c3abfda7669b8fdf577f86b07a9.avif",
-    category: 2, // Мясные (морепродукты можно отнести к мясным)
-    rating: 4.7,
-    ingredients: ["1", "18", "19", "20"],
-    sizes: [
-      { size: 25, price: 3245 },
-      { size: 30, price: 4445 },
-      { size: 35, price: 5495 },
-    ],
-  },
-  {
-    id: 23,
-    name: "Цезарь",
     description:
-      "Соус цезарь, моцарелла, курица, томаты черри, салат, пармезан",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c33ec9b7190911c2a7b133ee389.avif",
-    category: 6, // С курицей
-    rating: 4.5,
-    ingredients: ["1", "3", "7", "10"],
-    sizes: [
-      { size: 25, price: 2395 },
-      { size: 30, price: 3245 },
-      { size: 35, price: 4095 },
-    ],
-  },
-  {
-    id: 24,
-    name: "Деревенская",
-    description:
-      "Томатный соус, моцарелла, картофель, лук, бекон, маринованные огурцы",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c42f704740cae3253e3af6994dc.avif",
-    category: 2, // Мясные
-    rating: 4.4,
-    ingredients: ["1", "6", "12"],
-    sizes: [
-      { size: 25, price: 2345 },
-      { size: 30, price: 3195 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 25,
-    name: "Диабло",
-    description:
-      "Острый томатный соус, моцарелла, пепперони, халапеньо, табаско",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c3e232d72f99537c7c7dc9cc78c.avif",
-    category: 3, // Острые
-    rating: 4.6,
-    ingredients: ["1", "4", "14"],
-    sizes: [
-      { size: 25, price: 2445 },
-      { size: 30, price: 3295 },
-      { size: 35, price: 4145 },
-    ],
-  },
-  {
-    id: 26,
-    name: "Карбонара",
-    description: "Сливочный соус, моцарелла, бекон, ветчина, пармезан, яйцо",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c487c4b757b90db16eaed736e8e.avif",
-    category: 2, // Мясные (изменил с "Сладкие", так как это мясная пицца)
-    rating: 4.8,
-    ingredients: ["1", "3", "5", "6"],
-    sizes: [
-      { size: 25, price: 2595 },
-      { size: 30, price: 3495 },
-      { size: 35, price: 4395 },
-    ],
-  },
-  {
-    id: 27,
-    name: "Пицца с курицей и грибами",
-    description: "Сливочный соус, моцарелла, курица, шампиньоны, лук",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c4a828c76c2bf34c92c03c0deac.avif",
-    category: 6, // С курицей
-    rating: 4.5,
-    ingredients: ["1", "7", "9", "12"],
-    sizes: [
-      { size: 25, price: 2345 },
-      { size: 30, price: 3195 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 28,
-    name: "Острая с халапеньо",
-    description: "Томатный соус, моцарелла, салями, халапеньо, перец чили",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c2dfc3f720dbc150e0210dbf02f.avif",
-    category: 3, // Острые
-    rating: 4.7,
-    ingredients: ["1", "8", "14"],
-    sizes: [
-      { size: 25, price: 2495 },
-      { size: 30, price: 3395 },
-      { size: 35, price: 4245 },
-    ],
-  },
-  {
-    id: 29,
-    name: "Маргарита",
-    description: "Томатный соус, моцарелла, томаты, итальянские травы",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c54d41178da8539c768e3232d2b.avif",
-    category: 5, // Вегетарианские
-    rating: 4.5,
-    ingredients: ["1", "10"],
-    sizes: [
-      { size: 25, price: 1995 },
-      { size: 30, price: 2745 },
-      { size: 35, price: 3495 },
-    ],
-    canMake: true,
-  },
-  {
-    id: 30,
-    name: "Пепперони",
-    description: "Томатный соус, моцарелла, пепперони",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c2bbccc719094cc6fd0ead33551.avif",
+      "Цыпленок, ветчина, пепперони, острая чоризо, бекон, моцарелла, томатный соус",
     category: 2, // Мясные
     rating: 4.8,
-    ingredients: ["1", "4"],
+    ingredients: ["1", "6", "2", "3", "7", "11"],
     sizes: [
-      { size: 25, price: 2295 },
-      { size: 30, price: 3145 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 31,
-    name: "Четыре сыра",
-    description: "Сливочный соус, моцарелла, пармезан, чеддер, дор-блю",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c479e6e7430b77b3b72a73d0416.avif",
-    category: 5, // Вегетарианские
-    rating: 4.7,
-    ingredients: ["1", "2", "3"],
-    sizes: [
-      { size: 25, price: 2445 },
-      { size: 30, price: 3345 },
-      { size: 35, price: 4245 },
-    ],
-  },
-  {
-    id: 32,
-    name: "Гавайская",
-    description: "Томатный соус, моцарелла, ветчина, ананас",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c5ac24e7838a952f194b30f76ff.avif",
-    category: 2, // Мясные
-    rating: 4.2,
-    ingredients: ["1", "5", "15"],
-    sizes: [
-      { size: 25, price: 2245 },
-      { size: 30, price: 2995 },
-      { size: 35, price: 3795 },
-    ],
-  },
-  {
-    id: 33,
-    name: "Мясная",
-    description:
-      "Томатный соус, моцарелла, ветчина, пепперони, бекон, говядина",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c6c934b756d9ffa69f3504fc150.avif",
-    category: 2, // Мясные
-    rating: 4.9,
-    ingredients: ["1", "4", "5", "6", "8"],
-    sizes: [
-      { size: 25, price: 2645 },
-      { size: 30, price: 3595 },
-      { size: 35, price: 4495 },
-    ],
-  },
-  {
-    id: 34,
-    name: "Барбекю",
-    description: "Соус барбекю, моцарелла, курица, бекон, красный лук, томаты",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c314da277fd8acdfcf15e3c8298.avif",
-    category: 6, // С курицей
-    rating: 4.6,
-    ingredients: ["1", "6", "7", "10", "12"],
-    sizes: [
-      { size: 25, price: 2495 },
-      { size: 30, price: 3395 },
-      { size: 35, price: 4295 },
-    ],
-  },
-  {
-    id: 35,
-    name: "Овощная",
-    description: "Томатный соус, моцарелла, томаты, перец, грибы, маслины, лук",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c44a523772c9f60f7fe864fdccc.avif",
-    category: 5, // Вегетарианские
-    rating: 4.3,
-    ingredients: ["1", "9", "10", "11", "12", "13"],
-    sizes: [
-      { size: 25, price: 1995 },
-      { size: 30, price: 2695 },
-      { size: 35, price: 3395 },
-    ],
-  },
-  {
-    id: 36,
-    name: "Морская",
-    description: "Сливочный соус, моцарелла, креветки, кальмары, мидии, чеснок",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c3abfda7669b8fdf577f86b07a9.avif",
-    category: 2, // Мясные (морепродукты можно отнести к мясным)
-    rating: 4.7,
-    ingredients: ["1", "18", "19", "20"],
-    sizes: [
-      { size: 25, price: 3245 },
-      { size: 30, price: 4445 },
-      { size: 35, price: 5495 },
-    ],
-  },
-  {
-    id: 37,
-    name: "Цезарь",
-    description:
-      "Соус цезарь, моцарелла, курица, томаты черри, салат, пармезан",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c33ec9b7190911c2a7b133ee389.avif",
-    category: 6, // С курицей
-    rating: 4.5,
-    ingredients: ["1", "3", "7", "10"],
-    sizes: [
-      { size: 25, price: 2395 },
-      { size: 30, price: 3245 },
-      { size: 35, price: 4095 },
-    ],
-  },
-  {
-    id: 38,
-    name: "Деревенская",
-    description:
-      "Томатный соус, моцарелла, картофель, лук, бекон, маринованные огурцы",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c42f704740cae3253e3af6994dc.avif",
-    category: 2, // Мясные
-    rating: 4.4,
-    ingredients: ["1", "6", "12"],
-    sizes: [
-      { size: 25, price: 2345 },
-      { size: 30, price: 3195 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 39,
-    name: "Диабло",
-    description:
-      "Острый томатный соус, моцарелла, пепперони, халапеньо, табаско",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c3e232d72f99537c7c7dc9cc78c.avif",
-    category: 3, // Острые
-    rating: 4.6,
-    ingredients: ["1", "4", "14"],
-    sizes: [
-      { size: 25, price: 2445 },
-      { size: 30, price: 3295 },
-      { size: 35, price: 4145 },
-    ],
-  },
-  {
-    id: 40,
-    name: "Карбонара",
-    description: "Сливочный соус, моцарелла, бекон, ветчина, пармезан, яйцо",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c487c4b757b90db16eaed736e8e.avif",
-    category: 2, // Мясные (изменил с "Сладкие", так как это мясная пицца)
-    rating: 4.8,
-    ingredients: ["1", "3", "5", "6"],
-    sizes: [
-      { size: 25, price: 2595 },
-      { size: 30, price: 3495 },
-      { size: 35, price: 4395 },
-    ],
-  },
-  {
-    id: 41,
-    name: "Пицца с курицей и грибами",
-    description: "Сливочный соус, моцарелла, курица, шампиньоны, лук",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c4a828c76c2bf34c92c03c0deac.avif",
-    category: 6, // С курицей
-    rating: 4.5,
-    ingredients: ["1", "7", "9", "12"],
-    sizes: [
-      { size: 25, price: 2345 },
-      { size: 30, price: 3195 },
-      { size: 35, price: 3995 },
-    ],
-  },
-  {
-    id: 42,
-    name: "Острая с халапеньо",
-    description: "Томатный соус, моцарелла, салями, халапеньо, перец чили",
-    image:
-      "https://media.dodostatic.net/image/r:584x584/01995c2dfc3f720dbc150e0210dbf02f.avif",
-    category: 3, // Острые
-    rating: 4.7,
-    ingredients: ["1", "8", "14"],
-    sizes: [
-      { size: 25, price: 2495 },
-      { size: 30, price: 3395 },
-      { size: 35, price: 4245 },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Традиционное",
+        image: "/meat_30_tra.png",
+        price: 4190,
+        weight: 530,
+      },
+      {
+        text: "Средняя",
+        size: "30",
+        dough: "Тонкое",
+        image: "/meat_30_ton.png",
+        price: 4190,
+        weight: 500,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Традиционное",
+        image: "/meat_35_tra.png",
+        price: 5190,
+        weight: 680,
+      },
+      {
+        text: "Большая",
+        size: "35",
+        dough: "Тонкое",
+        image: "/meat_35_ton.png",
+        price: 5190,
+        weight: 640,
+      },
     ],
   },
 ];
@@ -687,7 +570,8 @@ export const pizzaIngredients: PizzaIngredient[] = [
     name: "Ветчина",
     category: "meat",
     price: 445,
-    image: "https://cdn.dodostatic.net/static/Img/Ingredients/01991533855772df87ba3c143e2c54e2.png",
+    image:
+      "https://cdn.dodostatic.net/static/Img/Ingredients/01991533855772df87ba3c143e2c54e2.png",
   },
   {
     id: "6",

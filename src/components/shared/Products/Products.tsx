@@ -9,7 +9,7 @@ import Modal from "@/components/shared/Products/Modal";
 export default function Products() {
   const [currentPage, setCurrentPage] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-  const [selectedPizzaId, setSelectedPizzaId] = useState<number | null>(null);
+  const [selectedPizzaId, setSelectedPizzaId] = useState<string | null>(null);
 
   const filterBySorting = useCategories((state) => state.sort);
   const filterByCategory = useCategories((state) => state.category);
@@ -77,7 +77,7 @@ export default function Products() {
 
   const selectedPizza = pizzas.find((p) => p.id === selectedPizzaId);
 
-  const handleProductClick = (id: number) => {
+  const handleProductClick = (id: string) => {
     setSelectedPizzaId(id);
     setOpenModal(true);
   };

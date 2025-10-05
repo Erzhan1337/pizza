@@ -2,10 +2,23 @@ import Image from "next/image";
 import { Pizza } from "@/types";
 import Link from "next/link";
 
-function SearchCart({ pizza }: { pizza: Pizza }) {
+function SearchCart({
+  pizza,
+  handleCloseSearch,
+  onPizzaClick,
+}: {
+  pizza: Pizza;
+  handleCloseSearch: () => void;
+  onPizzaClick: (pizza:Pizza) => void;
+}) {
+
+  const handleClick = () => {
+    onPizzaClick(pizza);
+    handleCloseSearch();
+  }
   return (
-    <Link
-      href={`/pizza/${pizza.id}`}
+    <button
+      onClick={handleClick}
       className="w-full flex items-center gap-5 mb-3 hover:bg-primary/20 rounded-xl p-3"
     >
       <div>
@@ -17,7 +30,7 @@ function SearchCart({ pizza }: { pizza: Pizza }) {
       <div>
         <span className="text-gray-400">{pizza.sizes[0].price} ₸</span>
       </div>
-    </Link>
+    </button>
   );
 }
 

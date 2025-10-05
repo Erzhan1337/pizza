@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import { Pizza } from "@/types";
-import { Grid2x2Plus, Settings2, Star } from "lucide-react";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Settings2, Star } from "lucide-react";
+import AddButton from "@/components/shared/Products/AddButton";
+import { useRouter } from "next/navigation";
+import useCart from "@/store/useCart";
+import { useMemo } from "react";
 
 function ProductCard({
   pizza,
@@ -11,22 +13,27 @@ function ProductCard({
   modal,
 }: {
   pizza: Pizza;
-  onClick: (id: number) => void;
+  onClick: (id: string) => void;
   modal: (open: boolean) => void;
 }) {
-  const [clicked, setClicked] = useState(false);
-  const [count, setCount] = useState(1);
-
-  const handleClick = () => {
-    if (!pizza.canMake) {
-      setClicked(true);
-    }
+  const router = useRouter();
+  const items = useCart((state) => state.items);
+  const isInCart = useMemo(
+    () => items.some((item) => item.id === pizza.id),
+    [items, pizza.id],
+  );
+  const handleAddClick = () => {
+    if (!isInCart) {
+      handleOpenModal();
+    } else router.push("/cart");
   };
+  const handleMakeClick = () => {};
 
   const handleOpenModal = () => {
     onClick(pizza.id);
     modal(true);
   };
+
   return (
     <div className="mt-5 relative">
       <button
@@ -59,37 +66,20 @@ function ProductCard({
         </p>
         <div className="flex items-center justify-between">
           <span className="font-bold text-xl">от {pizza.sizes[0].price} ₸</span>
-          {clicked ? (
-            <div className="flex items-center gap-2">
-              <Button
-                onClick={() => setCount((prev) => (prev > 0 ? prev - 1 : prev))}
-                variant="outline"
-                size="sm"
-                className="text-primary"
-              >
-                -
-              </Button>
-              <span className="font-bold text-xl">{count}</span>
-              <Button
-                onClick={() => setCount((prev) => prev + 1)}
-                variant="outline"
-                size="sm"
-                className="text-primary"
-              >
-                +
-              </Button>
-            </div>
-          ) : (
-            <button
-              onClick={handleClick}
-              className="flex items-center py-2 px-3 rounded-lg bg-[#FFFAF4] text-primary font-bold cursor-pointer hover:scale-95 transition-all duration-300 ease-linear"
-            >
-              {pizza.canMake && (
-                <Grid2x2Plus size={20} className="text-primary mr-2" />
-              )}
-              {pizza.canMake ? "Собрать" : "+ Добавить"}
-            </button>
-          )}
+          <div>
+            <AddButton
+              text="Собрать"
+              handleClick={handleMakeClick}
+              className={`${pizza.canMake ? "" : "hidden"}`}
+              canMake={pizza.canMake}
+            />
+            <AddButton
+              text={`${isInCart ? "✔ В Корзине" : "+ Добавить"}`}
+              handleClick={handleAddClick}
+              canMake={pizza.canMake}
+              className={`${pizza.canMake ? "hidden" : ""}`}
+            />
+          </div>
         </div>
       </div>
     </div>

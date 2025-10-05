@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+label {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

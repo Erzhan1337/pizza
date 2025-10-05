@@ -7,11 +7,17 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useRef, useState } from "react";
 import { pizzas } from "@/data";
 import SearchCart from "@/components/shared/SearchCart";
+import { Pizza } from "@/types";
+import Modal from "@/components/shared/Products/Modal";
+import useCart from "@/store/useCart";
 
 function Header() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedPizza, setSelectedPizza] = useState<Pizza | null>(null);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
+  const totalItems = useCart((state) => state.getTotalItems());
+  const totalPrice = useCart((state) => state.getTotalPrice());
 
   const handleClickSearch = () => {
     setIsOpenSearch(true);
@@ -23,6 +29,15 @@ function Header() {
     if (searchRef.current) {
       searchRef.current.blur();
     }
+  };
+
+  const handleClickPizza = (pizza: Pizza) => {
+    setSelectedPizza(pizza);
+    handleCloseSearch();
+  };
+
+  const handleCloseModal = () => {
+    setSelectedPizza(null);
   };
 
   useEffect(() => {
@@ -43,7 +58,7 @@ function Header() {
     };
 
     document.addEventListener("scroll", handleScroll);
-    document.addEventListener("keydown", handleScroll);
+    document.addEventListener("keydown", handleEscapePress);
     return () => {
       document.removeEventListener("scroll", handleScroll);
       document.removeEventListener("keydown", handleEscapePress);
@@ -101,12 +116,12 @@ function Header() {
               href="/cart"
               className="group bg-primary flex items-center h-[48px] px-5 py-2 text-white rounded-xl"
             >
-              <span>2000 ₸</span>
+              <span>{totalPrice} ₸</span>
               <div className="w-[0.5px] h-full bg-white mx-3" />
               <div className="relative">
                 <div className="flex items-center gap-1 group-hover:opacity-0 transition-all duration-300">
                   <ShoppingCart size={18} />
-                  <span>0</span>
+                  <span>{totalItems}</span>
                 </div>
                 <ArrowRight
                   size={22}
@@ -127,13 +142,21 @@ function Header() {
                     p.name.toLowerCase().includes(searchTerm.toLowerCase()),
                   )
                   .map((pizza, index) => (
-                    <SearchCart pizza={pizza} key={index} />
+                    <SearchCart
+                      pizza={pizza}
+                      key={index}
+                      handleCloseSearch={handleCloseSearch}
+                      onPizzaClick={handleClickPizza}
+                    />
                   ))}
               </div>
             </Container>
           </div>
         )}
       </header>
+      {selectedPizza && (
+        <Modal pizza={selectedPizza} onClose={handleCloseModal} />
+      )}
     </>
   );
 }
